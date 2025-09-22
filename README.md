@@ -1,6 +1,9 @@
 # varp
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![Contributors](https://img.shields.io/github/contributors/mtrihoang/varp)
+![GitHub last commit](https://img.shields.io/github/last-commit/mtrihoang/varp)
+![GitHub Repo stars](https://img.shields.io/github/stars/mtrihoang/varp)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ![Python Version](https://img.shields.io/badge/python-3.12.4-blue)
 
