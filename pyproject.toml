@@ -9,3 +9,9 @@ authors = [{ name = "Tri Hoang"}]
 dependencies = [
   "numpy>=1.25,<3"
 ]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

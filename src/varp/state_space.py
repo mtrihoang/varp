@@ -3,6 +3,21 @@ import numpy as np
 
 
 def state_space_representation(df, p):
+    """
+    Create the state-space representation of VAR(p).
+
+    Parameters
+    ----------
+    df (numpy.ndarray): input time series data.
+    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+
+    Returns
+    -------
+    Phi (numpy.ndarray): the (kp x kp) state transition matrix. Where k is the number of variables.
+    Gamma (numpy.ndarray): the (kp x k) matrix which maps shock into state.
+    C (numpy.ndarray): the (kp x 1) intercept vector, estimated from the reduced-form VAR(p).
+    Theta (numpy.ndarray): the (k x kp) matrix which maps state into (observed) variables.
+    """
     Beta_hat = estimate_reduced_form_VAR(df, p)[0]
 
     c_hat = Beta_hat[0, :]
@@ -29,6 +44,18 @@ def state_space_representation(df, p):
 
 
 def state_variables(df, p):
+    """
+    Find the latest observed state of VAR(p).
+
+    Parameters
+    ----------
+    df (numpy.ndarray): input time series data.
+    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+
+    Returns
+    -------
+    s_T (numpy.ndarray): the (kp x 1) vector is associated with the latest observed state.
+    """
     T, k = df.shape
     s_T = np.zeros(k * p)
     for r in range(p):

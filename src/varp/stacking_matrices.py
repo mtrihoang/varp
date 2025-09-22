@@ -2,11 +2,35 @@ import numpy as np
 
 
 def stacked_Y(df, p):
+    """
+    Create matrix Y.
+
+    Parameters
+    ----------
+    df (numpy.ndarray): input time series data.
+    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+
+    Returns
+    -------
+    Y (numpy.ndarray): An array which contains stacked endogenous variables.
+    """
     Y = df[p:, :]
     return Y
 
 
 def stacked_X(df, p):
+    """
+    Create matrix X.
+
+    Parameters
+    ----------
+    df (numpy.ndarray): input time series data.
+    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+
+    Returns
+    -------
+    X (numpy.ndarray): An array which contains stacked regressor variables (with intercept).
+    """
     T, k = df.shape
     lag_list = []
     for r in range(1, p + 1):
