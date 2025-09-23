@@ -29,3 +29,6 @@ To show IRF plots
 ```
  varp.irf_plot(df, p, h)
 ```
+
+## Example
+![alt text](image.png)
