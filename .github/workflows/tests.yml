@@ -1,4 +1,4 @@
-name: Test the varp package
+name: CI Status
 
 on:
   push:
