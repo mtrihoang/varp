@@ -7,6 +7,7 @@
 ![Contributors](https://img.shields.io/github/contributors/mtrihoang/varp)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mtrihoang/varp)
 ![GitHub Repo stars](https://img.shields.io/github/stars/mtrihoang/varp)
+![Tests](https://github.com/mtrihoang/varp/actions/workflows/tests.yml/badge.svg)
 
 **Author:** [Tri Hoang](https://github.com/mtrihoang)
 
