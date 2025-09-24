@@ -49,7 +49,7 @@ def state_variables(df, p):
 
     Parameters
     ----------
-    df (numpy.ndarray): input time series data.
+    df (pandas.core.frame.DataFrame): input time series data.
     p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
 
     Returns
@@ -57,7 +57,9 @@ def state_variables(df, p):
     s_T (numpy.ndarray): the (kp x 1) vector is associated with the latest observed state.
     """
     T, k = df.shape
+    df_tmp = df.copy()
+    df_tmp = df_tmp.to_numpy()
     s_T = np.zeros(k * p)
     for r in range(p):
-        s_T[(k * r) : (k * (r + 1))] = df[T - (r + 1), :]
+        s_T[(k * r) : (k * (r + 1))] = df_tmp[T - (r + 1), :]
     return s_T

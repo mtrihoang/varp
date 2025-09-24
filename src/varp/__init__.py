@@ -1,8 +1,8 @@
-from .stacking_matrices import stacked_Y, stacked_X
+from .stacked_matrices import stacked_Y, stacked_X
 from .estimate_var import estimate_reduced_form_VAR
 from .state_space import state_space_representation, state_variables
-from .irf_and_forecast import irf_and_forecast
-from .irf_plot import irf_plot
+from .irf import irf_coefs, irf_plots
+from .predict import pred_vars
 
 
 __all__ = [
@@ -11,7 +11,8 @@ __all__ = [
     "estimate_reduced_form_VAR",
     "state_space_representation",
     "state_variables",
-    "irf_and_forecast",
-    "irf_plot",
+    "irf_coefs",
+    "irf_plots",
+    "pred_vars",
 ]
 __version__ = "0.1.0"

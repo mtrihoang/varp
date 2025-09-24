@@ -1,4 +1,4 @@
-from .stacking_matrices import stacked_Y, stacked_X
+from .stacked_matrices import stacked_Y, stacked_X
 from numpy.linalg import inv
 
 
@@ -8,7 +8,7 @@ def estimate_reduced_form_VAR(df, p):
 
     Parameters
     ----------
-    df (numpy.ndarray): input time series data.
+    df (pandas.core.frame.DataFrame): input time series data.
     p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
 
     Returns

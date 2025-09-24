@@ -23,12 +23,16 @@ pip install git+https://github.com/mtrihoang/varp.git
 ## Usage
 To compute impulse response functions (IRF) in VAR(p)
 ```
- varp.irf_and_forecast(df, p, h)
+varp.irf_coefs(df, p, h)
 ```
 To show IRF plots
 ```
- varp.irf_plot(df, p, h)
+varp.irf_plots(df, p, h)
+```
+To forecast h steps ahead
+```
+varp.pred_vars(df, p, h)
 ```
 
 ## Example
-![alt text](image.png)
+![alt text](image-2.png)

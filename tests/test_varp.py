@@ -7,12 +7,12 @@ n_obs = 1000
 n_vars = 5
 mean = 0
 sd = 1
-p = 3
+p = 2
 h = 50
 A = np.random.uniform(-0.5, 0.5, size=(n_vars, n_vars))
 seed = 123456
 
-df = gen_data(n_obs, n_vars, mean, sd, A, seed).to_numpy()
+df = gen_data(n_obs, n_vars, mean, sd, A, seed)
 
 
 def test_symmetric_matrix():
