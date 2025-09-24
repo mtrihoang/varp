@@ -35,4 +35,4 @@ varp.pred_vars(df, p, h)
 ```
 
 ## Example
-![alt text](image-2.png)
+![alt text](irf_fig.png)
