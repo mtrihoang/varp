@@ -8,7 +8,7 @@ def state_space_representation(df, p):
 
     Parameters
     ----------
-    df (numpy.ndarray): input time series data.
+    df (pandas.core.frame.DataFrame): input time series data.
     p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
 
     Returns
