@@ -9,7 +9,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/mtrihoang/varp)
 ![CI Status](https://github.com/mtrihoang/varp/actions/workflows/tests.yml/badge.svg)
 
-**Author:** [Tri Hoang](https://github.com/mtrihoang)
+**Author:** Tri Hoang
 
 A Python package designed to explore Vector Autoregressive Models (VAR)
 

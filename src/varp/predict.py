@@ -1,7 +1,5 @@
 from .state_space import state_space_representation, state_variables
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 
 def pred_vars(df, p, h):
