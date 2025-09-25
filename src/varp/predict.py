@@ -68,5 +68,5 @@ def pred_plots(df, varname, p, h, num_obs):
     )
     sns.despine()
 
-    plt.title(f"VAR({p}) forecast: next {p} steps", fontsize=14)
+    plt.title(f"VAR({p}) forecast: next {h} steps", fontsize=14)
     plt.show()
