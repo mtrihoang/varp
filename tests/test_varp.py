@@ -6,14 +6,15 @@ from varp.irf import irf_coefs, irf_plots
 from varp.predict import pred_vars
 
 seed = 123456
-np.random.seed(seed)
-
 n_obs = 1000
 n_vars = 5
 mean = 0
 sd = 1
 p = 2
 h = 50
+
+np.random.seed(seed)
+
 A = np.random.uniform(-0.5, 0.5, size=(n_vars, n_vars))
 expected_irf_coefs = np.array(
     [-0.17638068, -0.09145083, 0.30423662, -0.40200738, 0.07473255]
@@ -32,7 +33,7 @@ def test_symmetric_matrix():
 
 def test_positive_definite_matrix():
     """
-    Test the symmetry of the covariance matrix of residuals.
+    Test if the residual covariance matrix is positive definite.
     """
     Sigma_U_hat = estimate_reduced_form_VAR(df, p)[1]
     assert (
