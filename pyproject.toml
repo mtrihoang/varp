@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "varp"               
 version = "0.1.0"                
-description = "A demo package for Vector Autoregressive Models (VAR)"
+description = "A Python package for exploring Vector Autoregressive Models (VAR)"
 readme = "README.md"             
 requires-python = ">=3.9"        
 license = { text = "MIT" }       
 authors = [{ name = "Tri Hoang"}]
-dependencies = ["numpy", "pandas", "matplotlib"]
+dependencies = ["numpy", "pandas", "matplotlib", "seaborn"]
 
 [tool.setuptools]
 package-dir = { "" = "src" }
