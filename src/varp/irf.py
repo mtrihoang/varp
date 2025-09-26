@@ -12,7 +12,7 @@ def irf_coefs(df, p, h):
     Parameters
     ----------
     df (pandas.core.frame.DataFrame): input time series data.
-    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+    p (int): the number of lags, associated with lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
     h (int): the number of periods ahead.
 
     Returns
@@ -35,7 +35,7 @@ def irf_plots(df, p, h):
     Parameters
     ----------
     df (pandas.core.frame.DataFrame): input time series data.
-    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+    p (int): the number of lags, associated with lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
     h (int): the number of periods ahead.
 
     Returns

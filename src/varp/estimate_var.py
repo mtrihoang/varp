@@ -9,12 +9,12 @@ def estimate_reduced_form_VAR(df, p):
     Parameters
     ----------
     df (pandas.core.frame.DataFrame): input time series data.
-    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+    p (int): the number of lags, associated with lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
 
     Returns
     -------
-    Beta_hat (numpy.ndarray): A (kp + 1) x k matrix of coefficients, including intercept.
-    Sigma_U_hat (numpy.ndarray): A (k x k) covariance matrix of residuals.
+    Beta_hat (numpy.ndarray): a (kp + 1) x k matrix of coefficients, including intercepts.
+    Sigma_U_hat (numpy.ndarray): a (k x k) covariance matrix of residuals.
     """
     Y, X = stacked_Y(df, p), stacked_X(df, p)
     Beta_hat = inv(X.T @ X) @ (X.T @ Y)

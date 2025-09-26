@@ -8,11 +8,11 @@ def stacked_Y(df, p):
     Parameters
     ----------
     df (pandas.core.frame.DataFrame): input time series data.
-    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+    p (int): the number of lags, associated with lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
 
     Returns
     -------
-    Y (numpy.ndarray): An array which contains stacked endogenous variables.
+    Y (numpy.ndarray): an array contains stacked endogenous variables.
     """
     df_tmp = df.copy()
     df_tmp = df_tmp.to_numpy()
@@ -27,11 +27,11 @@ def stacked_X(df, p):
     Parameters
     ----------
     df (pandas.core.frame.DataFrame): input time series data.
-    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+    p (int): the number of lags, associated with lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
 
     Returns
     -------
-    X (numpy.ndarray): An array which contains stacked regressor variables (with intercept).
+    X (numpy.ndarray): an array contains stacked regressors (with intercepts).
     """
     T, k = df.shape
     df_tmp = df.copy()

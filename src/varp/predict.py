@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 
 def pred_vars(df, p, h):
     """
-    Create Impulse Response Function (IRF) and forecast for the next periods of VAR(p).
+    Compute impulse response functions (IRFs) and h-step ahead forecasts from VAR(p).
 
     Parameters
     ----------
     df (pandas.core.frame.DataFrame): input time series data.
-    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+    p (int): the number of lags, associated with lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
     h (int): the number of periods ahead.
 
     Returns
@@ -39,13 +39,13 @@ def pred_plots(df, varname, p, h, num_obs):
     Parameters
     ----------
     df (pandas.core.frame.DataFrame): input time series data.
-    p (int): the number of lags, which will create lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
+    p (int): the number of lags, associated with lagged values x_{t-1}, x_{t-2}, ..., x_{t-p}.
     h (int): the number of periods ahead.
-    num_obs (int): the last actual observations.
+    num_obs (int): the last observations of variables.
 
     Returns
     -------
-    The VAR(p) forecast plot.
+    The h-step ahead forecasts using the VAR(p) model.
     """
     df_actual = df.tail(num_obs)
     df_pred = pred_vars(df, p, h)
@@ -68,5 +68,5 @@ def pred_plots(df, varname, p, h, num_obs):
     )
     sns.despine()
 
-    plt.title(f"VAR({p}) forecast: next {h} steps", fontsize=14)
+    plt.title(f"VAR({p}) forecast: next {h}-steps", fontsize=14)
     plt.show()
