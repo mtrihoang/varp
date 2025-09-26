@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def pred_vars(df, p, h):
     """
-    Compute impulse response functions (IRFs) and h-step ahead forecasts from VAR(p).
+    Compute h-step ahead forecasts from VAR(p).
 
     Parameters
     ----------
@@ -34,7 +34,7 @@ def pred_vars(df, p, h):
 
 def pred_plots(df, varname, p, h, num_obs):
     """
-    Create Impulse Response Function (IRF) and forecast for the next periods of VAR(p).
+    Generate forecast plots from VAR(p).
 
     Parameters
     ----------
@@ -45,7 +45,7 @@ def pred_plots(df, varname, p, h, num_obs):
 
     Returns
     -------
-    The h-step ahead forecasts using the VAR(p) model.
+    Plots of h-step ahead forecasts.
     """
     df_actual = df.tail(num_obs)
     df_pred = pred_vars(df, p, h)

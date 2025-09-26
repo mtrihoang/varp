@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 def irf_coefs(df, p, h):
     """
-    Create Impulse Response Function (IRF) and forecast for the next periods of VAR(p).
+    Compute impulse response functions (IRFs) from VAR(p).
 
     Parameters
     ----------
@@ -30,7 +30,7 @@ def irf_coefs(df, p, h):
 
 def irf_plots(df, p, h):
     """
-    Create plots of Impulse Response Function (IRF).
+    Generate IRF plots from VAR(p).
 
     Parameters
     ----------
