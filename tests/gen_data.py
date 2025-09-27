@@ -20,9 +20,10 @@ def gen_data(n_obs, n_vars, mean, sd, A, seed):
     df (pandas.core.frame.DataFrame): input time series data.
     """
     var_names = [f"x{i+1}" for i in range(n_vars)]
+    time_index = [f"t{i}" for i in range(n_obs)]
     rng = np.random.default_rng(seed)
     data = rng.random((n_obs, n_vars))
     for t in range(1, n_obs):
         data[t] = A @ data[t - 1] + np.random.normal(mean, sd, n_vars)
-    df = pd.DataFrame(data, columns=var_names)
+    df = pd.DataFrame(data, columns=var_names, index=time_index)
     return df
