@@ -16,11 +16,11 @@ h = 50
 np.random.seed(seed)
 
 A = np.random.uniform(-0.5, 0.5, size=(n_vars, n_vars))
+df = gen_data(n_obs, n_vars, mean, sd, A, seed)
+
 expected_irf_coefs = np.array(
     [-0.17638068, -0.09145083, 0.30423662, -0.40200738, 0.07473255]
 )
-
-df = gen_data(n_obs, n_vars, mean, sd, A, seed)
 
 
 def test_symmetric_matrix():

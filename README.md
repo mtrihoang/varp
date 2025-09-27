@@ -21,6 +21,14 @@ pip install git+https://github.com/mtrihoang/varp.git
 ```
 
 ## Usage
+Parameters
+
+    df (pandas.core.frame.DataFrame): input time series data.
+    varname (str): the selected variable to predict.
+    p (int): the number of lags.
+    h (int): the number of prediction steps.
+    num_obs (int): the number of historical data points to display in forecast plots.
+
 To compute impulse response functions (IRF) in VAR(p)
 ```
 varp.irf_coefs(df, p, h)
@@ -32,6 +40,10 @@ varp.irf_plots(df, p, h)
 To forecast h steps ahead
 ```
 varp.pred_vars(df, p, h)
+```
+To show forecast plots
+```
+varp.pred_plots(df, varname, p, h, num_obs)
 ```
 
 ## Example
