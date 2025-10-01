@@ -64,7 +64,7 @@ t99  1.107618 -0.609195  0.609274  0.865810  1.176038
 </pre>
 
 ```
-varp.irf_plots(df, p, h)
+varp.irf_plots(df, p = 3, h = 12)
 ```
 
 ![alt text](irf_fig.png)
