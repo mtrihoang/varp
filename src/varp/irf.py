@@ -45,12 +45,17 @@ def irf_plots(df, p, h):
     n_vars = df.shape[1]
     irf = irf_coefs(df, p, h)
     var_names = list(df.columns)
+    min_irf = np.min(irf)
     fig, axes = plt.subplots(n_vars, n_vars, figsize=(20, 10))
+
     for i in range(n_vars):
         for j in range(n_vars):
             axes[i, j].plot(irf[:, i, j])
             axes[i, j].axhline(0, color="red", linewidth=1, linestyle="--")
             axes[i, j].set_title(f"{var_names[i]} responds to shock {var_names[j]}")
+            for sub_plot in axes.flatten():
+                sub_plot.set_xlim(0, h)
+                sub_plot.set_ylim(min_irf, 1)
 
     plt.tight_layout()
     plt.show()

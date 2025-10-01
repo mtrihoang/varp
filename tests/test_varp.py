@@ -5,21 +5,21 @@ from varp.estimate_var import estimate_reduced_form_VAR
 from varp.irf import irf_coefs, irf_plots
 from varp.predict import pred_vars
 
-seed = 123456
-n_obs = 1000
+seed = 53
+n_obs = 100
 n_vars = 5
 mean = 0
 sd = 1
-p = 2
-h = 50
+p = 3
+h = 12
 
 np.random.seed(seed)
 
-A = np.random.uniform(-0.5, 0.5, size=(n_vars, n_vars))
+A = np.random.uniform(-0.1, 0.1, size=(n_vars, n_vars))
 df = gen_data(n_obs, n_vars, mean, sd, A, seed)
 
 expected_irf_coefs = np.array(
-    [-0.17638068, -0.09145083, 0.30423662, -0.40200738, 0.07473255]
+    [0.02037557, -0.05131572, -0.10746685, -0.20985271, -0.1719685]
 )
 
 
