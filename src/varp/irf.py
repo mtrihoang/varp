@@ -49,7 +49,7 @@ def irf_plots(df, p, h):
     max_irf = np.max(irf)
     fig, axes = plt.subplots(n_vars, n_vars, figsize=(3 * n_vars, 2.5 * n_vars))
 
-    plt.rcParams["font.family"] = "Source Code Pro"
+    plt.rcParams["font.family"] = "DejaVu Sans"
     plt.rcParams["font.size"] = 9
 
     for i in range(n_vars):
