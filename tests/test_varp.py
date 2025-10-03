@@ -5,9 +5,9 @@ from varp.estimate_var import estimate_reduced_form_VAR
 from varp.irf import irf_coefs, irf_plots
 from varp.predict import pred_vars
 
-seed = 53
+seed = 12345
 n_obs = 100
-n_vars = 5
+n_vars = 4
 mean = 0
 sd = 1
 p = 3
