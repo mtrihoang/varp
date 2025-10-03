@@ -49,9 +49,16 @@ varp.pred_plots(df, varname, p, h, num_obs)
 
 ## Example
 ```
->>> print(df.shape)
+p = 3
+h = 12
+
+type(df)
+<class 'pandas.core.frame.DataFrame'>
+
+df.shape
 (100, 4)
->>> print(df.columns)
+
+df.columns
 Index(['x1', 'x2', 'x3', 'x4'], dtype='object')
 ```
 

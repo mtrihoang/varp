@@ -46,6 +46,7 @@ def irf_plots(df, p, h):
     irf = irf_coefs(df, p, h)
     var_names = list(df.columns)
     min_irf = np.min(irf)
+    max_irf = np.max(irf)
     fig, axes = plt.subplots(n_vars, n_vars, figsize=(3 * n_vars, 2.5 * n_vars))
 
     plt.rcParams["font.family"] = "Source Code Pro"
@@ -57,7 +58,7 @@ def irf_plots(df, p, h):
             axes[i, j].axhline(0, color="red", linewidth=2, linestyle="--")
             axes[i, j].set_title(f"{var_names[i]} responds to shock {var_names[j]}")
             axes[i, j].set_xlim(0, h)
-            axes[i, j].set_ylim(min_irf, 1)
+            axes[i, j].set_ylim(min_irf, max_irf)
 
     plt.tight_layout()
     plt.show()
